@@ -1,0 +1,411 @@
+/* إصلاحات CSS للموقع */
+
+
+/* إصلاح المشاكل في ملف style.css الأصلي */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+/* إصلاح الأزرار */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    white-space: nowrap;
+    border: none;
+    text-align: center;
+    justify-content: center;
+}
+
+
+/* إصلاح البطاقات */
+
+.card-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+}
+
+.card-badge.trending {
+    background-color: var(--accent-color);
+}
+
+.card-badge.popular {
+    background-color: var(--success-color);
+}
+
+.card-badge.favorite {
+    background-color: var(--warning-color);
+}
+
+
+/* إصلاح الإحصائيات */
+
+.card-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 15px;
+}
+
+.card-stats .stat {
+    display: flex;
+    align-items: center;
+    color: #6c757d;
+    font-size: 0.9rem;
+    gap: 5px;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/* إصلاح الشريط المتحرك */
+
+.slider-section {
+    padding: 50px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-slide {
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 40px;
+    gap: 40px;
+}
+
+.slider-slide img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.slide-content {
+    flex: wrap;
+    padding: 20px;
+}
+
+.slide-tag {
+    display: inline;
+    padding: 5px 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+.slide-title {
+    font-size: 1.8rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.slide-description {
+    color: #6c757d;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.slide-link {
+    display: inline;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.slide-link:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+
+/* إصلاح النقاط */
+
+.slider-dots {
+    display: inline;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+
+/* إصلاح WowSlider */
+
+.wowslider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.wowslider .slides {
+    position: relative;
+    height: 400px;
+}
+
+.wowslider .slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.wowslider .slides img:first-child {
+    opacity: 1;
+}
+
+.controls {
+    margin-top: 15px;
+}
+
+
+/* إصلاح التذييل */
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-description {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s;
+    margin-left: 10px;
+}
+
+.social-link:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+
+/* إصلاح الأخطاء في الكود الأصلي */
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+
+/* إضافة تحسينات للوصولية */
+
+.btn:focus,
+.form-input:focus,
+nav ul li a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+
+/* تحسين التباين للنصوص */
+
+.card-description {
+    color: #495057;
+}
+
+.meta-item {
+    color: #6c757d;
+}
+
+
+/* إصلاح مشاكل التخطيط */
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* تحسين الأداء */
+
+.card {
+    will-change: transform;
+}
+
+.slider-slide {
+    will-change: transform;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* إضافة تأثيرات التحميل */
+
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}

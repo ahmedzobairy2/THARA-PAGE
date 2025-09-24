@@ -1,0 +1,166 @@
+{
+    "content": [{
+            "id": 1,
+            "title": "قصر دار الحجر التاريخي",
+            "category": "architecture",
+            "views": 1250,
+            "likes": 89,
+            "favorites": 45,
+            "date": "2025-01-15",
+            "location": "صنعاء",
+            "description": "تحفة معمارية يمنية فريدة تقع في وادي ظهر، بناها الإمام يحيى في القرن العشرين على صخرة ضخمة.",
+            "image": "../assets/img/dar-alhajar.jpeg",
+            "popularityBadge": "trending"
+        },
+        {
+            "id": 2,
+            "title": "صناعة الخناجر اليمنية التراثية",
+            "category": "crafts",
+            "views": 890,
+            "likes": 156,
+            "favorites": 78,
+            "date": "2025-01-10",
+            "location": "صنعاء",
+            "description": "فن صناعة الخناجر اليمنية التقليدية والتي تعتبر رمزاً للهوية اليمنية.",
+            "image": "../assets/img/yemeni-dagger.jpeg",
+            "popularityBadge": "popular"
+        },
+        {
+            "id": 3,
+            "title": "المندي اليمني الأصيل",
+            "category": "food",
+            "views": 675,
+            "likes": 92,
+            "favorites": 134,
+            "date": "2025-01-20",
+            "location": "حضرموت",
+            "description": "طبق تراثي يمني شهير يتكون من الأرز واللحم المطبوخ بطريقة خاصة في التنور التقليدي.",
+            "image": "../assets/img/mandi.jpeg",
+            "popularityBadge": "favorite"
+        },
+        {
+            "id": 4,
+            "title": "الأزياء اليمنية التقليدية",
+            "category": "clothing",
+            "views": 543,
+            "likes": 67,
+            "favorites": 29,
+            "date": "2025-01-25",
+            "location": "تعز",
+            "description": "تنوع رائع في الأزياء التراثية اليمنية التي تختلف من منطقة لأخرى.",
+            "image": "../assets/img/yemeni-clothes.jpeg",
+            "popularityBadge": null
+        },
+        {
+            "id": 5,
+            "title": "الموسيقى اليمنية التراثية",
+            "category": "music",
+            "views": 789,
+            "likes": 123,
+            "favorites": 56,
+            "date": "2025-01-12",
+            "location": "عدن",
+            "description": "تراث موسيقي غني يشمل الأغاني الشعبية والآلات الموسيقية التقليدية مثل العود والطبل.",
+            "image": "../assets/img/yemeni-music.jpeg",
+            "popularityBadge": null
+        },
+        {
+            "id": 6,
+            "title": "حكايات من التراث اليمني",
+            "category": "stories",
+            "views": 432,
+            "likes": 78,
+            "favorites": 91,
+            "date": "2025-01-30",
+            "location": "إب",
+            "description": "مجموعة من القصص والحكايات الشعبية اليمنية التي تحمل الحكمة والعبر.",
+            "image": "../assets/img/yemeni-stories.jpeg",
+            "popularityBadge": null
+        },
+        {
+            "id": 7,
+            "title": "شبام حضرموت: منهاتن الصحراء",
+            "category": "architecture",
+            "views": 2100,
+            "likes": 310,
+            "favorites": 200,
+            "date": "2025-02-05",
+            "location": "حضرموت",
+            "description": "مدينة شبام التاريخية بأبراجها الطينية العالية، مدرجة ضمن قائمة التراث العالمي لليونسكو.",
+            "image": "../assets/img/shibam.jpeg",
+            "popularityBadge": "trending"
+        },
+        {
+            "id": 8,
+            "title": "الزربيان العدني",
+            "category": "food",
+            "views": 980,
+            "likes": 142,
+            "favorites": 100,
+            "date": "2025-02-10",
+            "location": "عدن",
+            "description": "طبق يمني مميز من الأرز واللحم بنكهة البهارات الخاصة، يشتهر في عدن.",
+            "image": "../assets/img/zarbian.jpeg",
+            "popularityBadge": "favorite"
+        },
+        {
+            "id": 9,
+            "title": "العسل الدوعني",
+            "category": "food",
+            "views": 1650,
+            "likes": 220,
+            "favorites": 180,
+            "date": "2025-02-15",
+            "location": "حضرموت",
+            "description": "من أجود أنواع العسل في العالم، يتميز بنكهته الفريدة وفوائده الصحية.",
+            "image": "../assets/img/doani-honey.jpeg",
+            "popularityBadge": "popular"
+        }
+    ],
+    "categories": [
+        { "name": "العمارة التراثية", "count": 45, "icon": "fas fa-building", "key": "architecture" },
+        { "name": "الحرف اليدوية", "count": 32, "icon": "fas fa-hammer", "key": "crafts" },
+        { "name": "الأطعمة الشعبية", "count": 28, "icon": "fas fa-utensils", "key": "food" },
+        { "name": "الأزياء التراثية", "count": 19, "icon": "fas fa-tshirt", "key": "clothing" },
+        { "name": "الموسيقى والفنون", "count": 24, "icon": "fas fa-music", "key": "music" },
+        { "name": "القصص والحكايات", "count": 37, "icon": "fas fa-book-open", "key": "stories" }
+    ],
+    "slider": [{
+            "image": "../assets/img/old-sanaa.jpeg",
+            "tag": "العمارة التراثية",
+            "title": "صنعاء القديمة: تراث إنساني عالمي",
+            "description": "اكتشف عراقة وتاريخ صنعاء القديمة، أحد أقدم المدن المأهولة باستمرار في العالم.",
+            "link": "#"
+        },
+        {
+            "image": "../assets/img/dagger-banner.jpeg",
+            "tag": "الحرف اليدوية",
+            "title": "الخنجر اليمني: رمز الأصالة والتراث",
+            "description": "تعرف على فن صناعة الخناجر اليمنية التقليدية التي تعتبر جزءاً من الهوية اليمنية.",
+            "link": "#"
+        },
+        {
+            "image": "../assets/img/mandi-banner.jpeg",
+            "tag": "المأكولات التقليدية",
+            "title": "المندي اليمني: نكهة تراثية أصيلة",
+            "description": "استمتع برحلة إلى عالم النكهات اليمنية الأصيلة مع طبق المندي الشهير.",
+            "link": "#"
+        },
+        {
+            "image": "../assets/img/shibam-banner.jpeg",
+            "tag": "العمارة التراثية",
+            "title": "شبام: مدينة ناطحات السحاب الطينية",
+            "description": "أبراج شبام الطينية الفريدة تجعلها تُلقب بمنهاتن الصحراء.",
+            "link": "#"
+        },
+        {
+            "image": "../assets/img/dagger-banner.jpeg",
+            "image": "..assets/img/zarbian-banner.jpeg",
+            "image": "..architecture/img/zarbian-banner.jpeg",
+            "tag": "المأكولات الشعبية",
+            "title": "الزربيان العدني",
+            "description": "طبق يمني مميز يجمع بين الأرز واللحم والبهارات العدنية الأصيلة.",
+            "link": "#"
+        }
+    ]
+}

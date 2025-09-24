@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="موقع ثَرَى منصة التراث اليمني">
+    <meta name="author" content="Thara">
+
+    <link rel="icon" type="image/jpeg" href="assets/img/dar-alhajar.jpeg" border-radius="50%">
+    <!-- خطوط Google Fonts للعربية -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+    <title> ثَرَى - منصة التراث اليمني</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/fontawesome-free-7.0.1-web/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/fontawesome-free-7.0.1-web/css/all.css" rel="stylesheet">
+    <link href="assets/css/ultra-responsive.css" rel="stylesheet">
+    <link href="assets/css/mobile-navbar-fix.css" rel="stylesheet">
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/fixes.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/custom_extra.css" rel="stylesheet"> -->
+    <link href="assets/css/responsive-enhancements.css" rel="stylesheet">
+    <link href="assets/css/enhanced-responsive.css" rel="stylesheet">
+
+    <!-- Preload critical resources -->
+    <!-- <link rel="preload" href="assets/css/ultra-responsive.css" as="style"> -->
+
+
+    <!-- Enhanced mobile support -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+
+</head>
+
+<body>
+
+
+    <!-- الشريط العلوي -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>ثَرَى</h1>
+                        <span>منصة التراث اليمني التشاركية</span>
+                    </div>
+                </div>
+
+                <nav id="nav">
+                    <ul id="nav-menu">
+                        <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                        <li><a href="details.html"><i class="fas fa-compass"></i> تصفح التراث</a></li>
+                        <li><a href="adminDashboard.html"><i class="fas fa-plus-circle"></i> إضافة عنصر</a></li>
+                        <li><a href="#"><i class="fas fa-images"></i> معرض الصور</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> عن المنصة</a></li>
+                    </ul>
+                </nav>
+
+
+                <div class="auth-buttons">
+
+                    <a href="login.html" class="btn btn-outline">تسجيل الدخول</a>
+                    <a href="register.html" class="btn btn-primary">انضم إلينا</a>
+                </div>
+
+                <div class="hamburger" id="hamburger">
+                    <div class="hamburger-icon">
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- WowSlider (assistant inserted) -->
+    <!-- <section class="container my-4 ">
+        <h2 class="mb-3 ">معرض الصور</h2>
+        <div class="wowslider mx-auto ">
+            <div class="slides ">
+
+                <img src="assets/img/zarbian-banner.jpeg " alt="zarbian-banner.jpeg ">
+                <img src="assets/img/zarbian.jpeg " alt="zarbian.jpeg ">
+                <img src="assets/img/old-sanaa.jpeg " alt="old-sanaa.jpeg ">
+                <img src="assets/img/doani-honey.jpeg " alt="doani-honey.jpeg ">
+                <img src="assets/img/yemeni-dagger.jpg " alt="yemeni-dagger.jpg ">
+
+            </div>
+            <div class="controls text-center mt-2 ">
+                <button id="prev " class="btn btn-sm btn-outline-secondary me-2 ">&laquo; السابق</button>
+                <button id="next " class="btn btn-sm btn-outline-secondary ">التالي &raquo;</button>
+            </div>
+        </div>
+    </section> -->
+    <!-- End WowSlider -->
+
+    <!-- قسم الشريط المتحرك المثبت -->
+    <section class="slider-section">
+        <div class="slider-container">
+            <div class="slider-header">
+                <h2 class="slider-title">اكتشف كنوز التراث اليمني</h2>
+                <div class="slider-nav">
+                    <button class="slider-btn" id="sliderPrev">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                    <button class="slider-btn" id="sliderNext">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                </div>
+            </div>
+
+            <div class="slider-wrapper">
+                <div class="slider-track" id="sliderTrack">
+                    <!-- الشريحة 1 -->
+                    <div class="slider-slide active">
+                        <img src="assets/img/old-sanaa.jpeg" alt="صنعاء القديمة">
+                        <div class="slide-content">
+                            <span class="slide-tag">العمارة التراثية</span>
+                            <h3 class="slide-title">صنعاء القديمة: تراث إنساني عالمي</h3>
+                            <p class="slide-description">اكتشف عراقة وتاريخ صنعاء القديمة، أحد أقدم المدن المأهولة باستمرار في العالم.</p>
+                            <a href="details.html" class="slide-link">اكتشف المزيد</a>
+                        </div>
+                    </div>
+
+                    <!-- الشريحة 2 -->
+                    <div class="slider-slide">
+                        <img src="assets/img/dar-alhajar.jpeg" alt="قصر دار الحجر">
+                        <div class="slide-content">
+                            <span class="slide-tag">معلم تاريخي</span>
+                            <h3 class="slide-title">قصر دار الحجر التاريخي</h3>
+                            <p class="slide-description">تحفة معمارية يمنية فريدة تقع في وادي ظهر، بناها الإمام يحيى في القرن العشرين.</p>
+                            <a href="details.html" class="slide-link">اكتشف المزيد</a>
+                        </div>
+                    </div>
+
+                    <!-- الشريحة 3 -->
+                    <div class="slider-slide">
+                        <img src="assets/img/shibam.jpeg" alt="شبام حضرموت">
+                        <div class="slide-content">
+                            <span class="slide-tag">عمارة طينية</span>
+                            <h3 class="slide-title">شبام حضرموت: مانهاتن الصحراء</h3>
+                            <p class="slide-description">أقدم ناطحات سحاب في العالم، مباني طينية شاهقة تعود للقرن السادس عشر.</p>
+                            <a href="details.html" class="slide-link">اكتشف المزيد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- نقاط التنقل -->
+            <div class="slider-dots" id="sliderDots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- قسم البحث والفرز -->
+    <section class="search-filter-section ">
+        <div class="container ">
+            <div class="search-filter-container ">
+                <div class="search-box ">
+                    <input type="text " class="search-input " placeholder="ابحث في التراث اليمني... " id="searchInput ">
+                    <button class="search-btn " id="searchBtn ">
+                        <i class="fas fa-search "></i>
+                    </button>
+                </div>
+
+                <div class="filter-controls ">
+                    <span class="filter-label ">فرز حسب:</span>
+                    <div class="sort-buttons ">
+                        <button class="sort-btn active " data-sort="default ">الافتراضي</button>
+                        <button class="sort-btn " data-sort="views ">الأكثر زيارة</button>
+                        <button class="sort-btn " data-sort="likes ">الأكثر إعجاباً</button>
+                        <button class="sort-btn " data-sort="favorites ">الأكثر تفضيلاً</button>
+                        <button class="sort-btn " data-sort="recent ">الأحدث</button>
+                    </div>
+                </div>
+
+                <div class="filter-controls ">
+                    <span class="filter-label ">الفئة:</span>
+                    <select class="filter-select " id="categoryFilter ">
+                        <option value="all ">جميع الفئات</option>
+                        <option value="architecture ">العمارة التراثية</option>
+                        <option value="crafts ">الحرف اليدوية</option>
+                        <option value="food ">الأطعمة الشعبية</option>
+                        <option value="clothing ">الأزياء التراثية</option>
+                        <option value="music ">الموسيقى والفنون</option>
+                        <option value="stories ">القصص والحكايات</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="results-info ">
+                <span class="results-count ">9</span> نتيجة موجودة
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المحتوى المميز -->
+    <section class="featured ">
+        <div class="container ">
+            <div class="section-title ">
+                <h2>المحتوى المميز</h2>
+            </div>
+
+            <div class="cards-container ">
+                <!-- البطاقة 1 -->
+                <div class="card " data-category="architecture " data-id="1 ">
+                    <div class="card-badge trending ">شائع</div>
+                    <div class="card-image ">
+                        <img src="assets/img/dar-alhajar.jpeg " alt="قصر دار الحجر التاريخي ">
+                    </div>
+                    <div class="card-content ">
+                        <h3 class="card-title ">قصر دار الحجر التاريخي</h3>
+                        <p class="card-description ">تحفة معمارية يمنية فريدة تقع في وادي ظهر، بناها الإمام يحيى في القرن العشرين على صخرة ضخمة.</p>
+                        <div class="card-meta ">
+                            <span class="meta-item "><i class="fas fa-map-marker-alt "></i> صنعاء</span>
+                            <span class="meta-item "><i class="fas fa-calendar-alt "></i> 2025-01-15</span>
+                        </div>
+                        <div class="card-stats ">
+                            <div class="stat ">
+                                <i class="fas fa-eye "></i>
+                                <span>1250</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-heart "></i>
+                                <span>89</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-star "></i>
+                                <span>45</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- البطاقة 2 -->
+                <div class="card " data-category="crafts " data-id="2 ">
+                    <div class="card-badge popular ">مشهور</div>
+                    <div class="card-image ">
+                        <img src="assets/img/yemeni-dagger.jpg " alt="صناعة الخناجر اليمنية التراثية ">
+                    </div>
+                    <div class="card-content ">
+                        <h3 class="card-title ">صناعة الخناجر اليمنية التراثية</h3>
+                        <p class="card-description ">فن صناعة الخناجر اليمنية التقليدية والتي تعتبر رمزاً للهوية اليمنية.</p>
+                        <div class="card-meta ">
+                            <span class="meta-item "><i class="fas fa-map-marker-alt "></i> صنعاء</span>
+                            <span class="meta-item "><i class="fas fa-calendar-alt "></i> 2025-01-10</span>
+                        </div>
+                        <div class="card-stats ">
+                            <div class="stat ">
+                                <i class="fas fa-eye "></i>
+                                <span>890</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-heart "></i>
+                                <span>156</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-star "></i>
+                                <span>78</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- البطاقة 3 -->
+                <div class="card " data-category="food " data-id="3 ">
+                    <div class="card-badge favorite ">مفضل</div>
+                    <div class="card-image ">
+                        <img src="assets/img/mandi.jpeg " alt="المندي اليمني الأصيل ">
+                    </div>
+                    <div class="card-content ">
+                        <h3 class="card-title ">المندي اليمني الأصيل</h3>
+                        <p class="card-description ">طبق تراثي يمني شهير يتكون من الأرز واللحم المطبوخ بطريقة خاصة في التنور التقليدي.</p>
+                        <div class="card-meta ">
+                            <span class="meta-item "><i class="fas fa-map-marker-alt "></i> حضرموت</span>
+                            <span class="meta-item "><i class="fas fa-calendar-alt "></i> 2025-01-20</span>
+                        </div>
+                        <div class="card-stats ">
+                            <div class="stat ">
+                                <i class="fas fa-eye "></i>
+                                <span>675</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-heart "></i>
+                                <span>92</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-star "></i>
+                                <span>134</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- البطاقة 4 -->
+                <div class="card " data-category="clothing " data-id="4 ">
+                    <div class="card-image ">
+                        <img src="assets/img/yemeni-clothes.jpeg " alt="الأزياء اليمنية التقليدية ">
+                    </div>
+                    <div class="card-content ">
+                        <h3 class="card-title ">الأزياء اليمنية التقليدية</h3>
+                        <p class="card-description ">تنوع رائع في الأزياء التراثية اليمنية التي تختلف من منطقة لأخرى.</p>
+                        <a href="#" data-modal-ajax="heritage-details" data-title="الأزياء اليمنية التقليدية" data-description="تنوع رائع في الأزياء التراثية اليمنية التي تختلف من منطقة لأخرى. تشمل الثوب اليمني التقليدي والجنبية والعمامة وغيرها من القطع التراثية الأصيلة." data-image="assets/img/yemeni-clothes.jpeg"
+                            class="btn btn-primary btn-sm">عرض التفاصيل</a>
+                        <div class="card-meta ">
+                            <span class="meta-item "><i class="fas fa-map-marker-alt "></i> تعز</span>
+                            <span class="meta-item "><i class="fas fa-calendar-alt "></i> 2025-01-25</span>
+                        </div>
+                        <div class="card-stats ">
+                            <div class="stat ">
+                                <i class="fas fa-eye "></i>
+                                <span>543</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-heart "></i>
+                                <span>67</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-star "></i>
+                                <span>29</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- البطاقة 5 -->
+                <div class="card " data-category="music " data-id="5 ">
+                    <div class="card-image ">
+                        <img src="assets/img/yemeni-music.jpeg " alt="الموسيقى اليمنية التراثية ">
+                    </div>
+                    <div class="card-content ">
+                        <h3 class="card-title ">الموسيقى اليمنية التراثية</h3>
+                        <p class="card-description ">تراث موسيقي غني يشمل الأغاني الشعبية والآلات الموسيقية التقليدية مثل العود والطبل.</p>
+                        <div class="card-meta ">
+                            <span class="meta-item "><i class="fas fa-map-marker-alt "></i> عدن</span>
+                            <span class="meta-item "><i class="fas fa-calendar-alt "></i> 2025-01-12</span>
+                        </div>
+                        <div class="card-stats ">
+                            <div class="stat ">
+                                <i class="fas fa-eye "></i>
+                                <span>789</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-heart "></i>
+                                <span>112</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-star "></i>
+                                <span>65</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- البطاقة 6 -->
+                <div class="card " data-category="stories " data-id="6 ">
+                    <div class="card-image ">
+                        <img src="assets/img/yemeni-tales.jpeg " alt="حكايات من التراث اليمني ">
+                    </div>
+                    <div class="card-content ">
+                        <h3 class="card-title ">حكايات من التراث اليمني</h3>
+                        <p class="card-description ">مجموعة من الحكايات والأساطير الشعبية التي تعكس ثقافة وتاريخ اليمن.</p>
+                        <div class="card-meta ">
+                            <span class="meta-item "><i class="fas fa-map-marker-alt "></i> شبوة</span>
+                            <span class="meta-item "><i class="fas fa-calendar-alt "></i> 2025-01-18</span>
+                        </div>
+                        <div class="card-stats ">
+                            <div class="stat ">
+                                <i class="fas fa-eye "></i>
+                                <span>432</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-heart "></i>
+                                <span>54</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-star "></i>
+                                <span>21</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- البطاقة 7 -->
+                <div class="card " data-category="architecture " data-id="7 ">
+                    <div class="card-image ">
+                        <img src="assets/img/shibam.jpeg " alt="مدينة شبام حضرموت ">
+                    </div>
+                    <div class="card-content ">
+                        <h3 class="card-title ">مدينة شبام حضرموت</h3>
+                        <p class="card-description ">تُعرف بأنها أقدم مدينة ناطحات سحاب في العالم، وتتميز بمبانيها الطينية الشاهقة.</p>
+                        <div class="card-meta ">
+                            <span class="meta-item "><i class="fas fa-map-marker-alt "></i> حضرموت</span>
+                            <span class="meta-item "><i class="fas fa-calendar-alt "></i> 2025-01-22</span>
+                        </div>
+                        <div class="card-stats ">
+                            <div class="stat ">
+                                <i class="fas fa-eye "></i>
+                                <span>987</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-heart "></i>
+                                <span>210</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-star "></i>
+                                <span>150</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- البطاقة 8 -->
+                <div class="card " data-category="crafts " data-id="8 ">
+                    <div class="card-image ">
+                        <img src="assets/img/yemeni-jewelry.jpeg " alt="صناعة الفضة اليمنية ">
+                    </div>
+                    <div class="card-content ">
+                        <h3 class="card-title ">صناعة الفضة اليمنية</h3>
+                        <p class="card-description ">تتميز صناعة الفضة في اليمن بتصاميمها الفريدة التي تعكس التراث والثقافة المحلية.</p>
+                        <div class="card-meta ">
+                            <span class="meta-item "><i class="fas fa-map-marker-alt "></i> صنعاء</span>
+                            <span class="meta-item "><i class="fas fa-calendar-alt "></i> 2025-01-28</span>
+                        </div>
+                        <div class="card-stats ">
+                            <div class="stat ">
+                                <i class="fas fa-eye "></i>
+                                <span>654</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-heart "></i>
+                                <span>88</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-star "></i>
+                                <span>43</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- البطاقة 9 -->
+                <div class="card " data-category="food " data-id="9 ">
+                    <div class="card-image ">
+                        <img src="assets/img/doani-honey.jpeg " alt="العسل الدوعني اليمني ">
+                    </div>
+                    <div class="card-content ">
+                        <h3 class="card-title ">العسل الدوعني اليمني</h3>
+                        <p class="card-description ">يُعتبر من أجود أنواع العسل في العالم، ويتميز بفوائده الصحية العديدة.</p>
+                        <div class="card-meta ">
+                            <span class="meta-item "><i class="fas fa-map-marker-alt "></i> حضرموت</span>
+                            <span class="meta-item "><i class="fas fa-calendar-alt "></i> 2025-01-30</span>
+                        </div>
+                        <div class="card-stats ">
+                            <div class="stat ">
+                                <i class="fas fa-eye "></i>
+                                <span>1500</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-heart "></i>
+                                <span>320</span>
+                            </div>
+                            <div class="stat ">
+                                <i class="fas fa-star "></i>
+                                <span>250</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading" id="loading">
+            </div>
+
+            <div class=" no-results " class="fas fa-search">
+                </i>
+                <h3>لا توجد نتائج</h3>
+                <p>لم يتم العثور على عناصر تتطابق مع بحثك.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الفئات -->
+    <section>
+        <div> class= categories ">
+            <div class="container ">
+                <div class="section-title ">
+                    <h2>تصفح حسب الفئة</h2>
+                </div>
+
+                <div class="categories-container heritage-grid ">
+                    <div class="category-card " data-category-id="architecture ">
+                        <div class="category-icon ">
+                            <i class="fas fa-gopuram "></i>
+                        </div>
+                        <div class="category-info ">
+                            <h3 class="category-title ">العمارة التراثية</h3>
+                            <span class="category-count ">2 عنصر</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card " data-category-id="crafts ">
+                        <div class="category-icon ">
+                            <i class="fas fa-tools "></i>
+                        </div>
+                        <div class="category-info ">
+                            <h3 class="category-title ">الحرف اليدوية</h3>
+                            <span class="category-count ">2 عنصر</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card " data-category-id="food ">
+                        <div class="category-icon ">
+                            <i class="fas fa-utensils "></i>
+                        </div>
+                        <div class="category-info ">
+                            <h3 class="category-title ">الأطعمة الشعبية</h3>
+                            <span class="category-count ">2 عنصر</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card " data-category-id="clothing ">
+                        <div class="category-icon ">
+                            <i class="fas fa-tshirt "></i>
+                        </div>
+                        <div class="category-info ">
+                            <h3 class="category-title ">الأزياء التراثية</h3>
+                            <span class="category-count ">1 عنصر</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card " data-category-id="music ">
+                        <div class="category-icon ">
+                            <i class="fas fa-music "></i>
+                        </div>
+                        <div class="category-info ">
+                            <h3 class="category-title ">الموسيقى والفنون</h3>
+                            <span class="category-count ">1 عنصر</span>
+                        </div>
+                    </div>
+
+                    <div class="category-card " data-category-id="stories ">
+                        <div class="category-icon ">
+                            <i class="fas fa-book-open "></i>
+                        </div>
+                        <div class="category-info ">
+                            <h3 class="category-title ">القصص والحكايات</h3>
+                            <span class="category-count ">1 عنصر</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- قسم كيف تساهم -->
+    <section class="how-to ">
+        <div class="container ">
+            <div class="section-title ">
+                <h2>كيف يمكنك المساهمة؟</h2>
+            </div>
+
+            <div class="steps features-container ">
+                <div class="step feature-item ">
+                    <div class="step-number feature-icon ">1</div>
+                    <h3 class="step-title ">انضم إلينا</h3>
+                    <p class="step-description ">أنشئ حساباً جديداً لتتمكن من إضافة ومشاركة عناصر التراث اليمني.</p>
+                </div>
+                <div class="step feature-item ">
+                    <div class="step-number feature-icon ">2</div>
+                    <h3 class="step-title ">أضف عنصراً</h3>
+                    <p class="step-description ">شارك معلومات وصور عن عناصر التراث التي تعرفها وتعتز بها.</p>
+                </div>
+                <div class="step feature-item ">
+                    <div class="step-number feature-icon ">3</div>
+                    <h3 class="step-title ">تفاعل وشارك</h3>
+                    <p class="step-description ">تصفح المحتوى، أضف إعجابك، وشارك كنوز اليمن مع العالم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container ">
+            <div class="footer-content ">
+                <div class="footer-section ">
+                    <h3 class="footer-logo ">ثَرَى</h3>
+                    <p class="footer-description ">منصة تشاركية للحفاظ على التراث اليمني الغني والمتنوع.</p>
+                    <div class="social-links ">
+                        <a href="# " class="social-link "><i class="fab fa-facebook-f "></i></a>
+                        <a href="# " class="social-link "><i class="fab fa-twitter "></i></a>
+                        <a href="# " class="social-link "><i class="fab fa-instagram "></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section ">
+                    <h3 class="footer-title ">روابط سريعة</h3>
+                    <ul class="footer-links ">
+                        <li><a href="index.html ">الرئيسية</a></li>
+                        <li><a href="details.html ">تصفح التراث</a></li>
+                        <li><a href="adminDashboard.html ">إضافة عنصر</a></li>
+                        <li><a href="about.html ">عن المنصة</a></li>
+                        <li><a href="contact.html " data-modal-ajax="contact-form ">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section ">
+                    <h3 class="footer-title ">تواصل معنا</h3>
+                    <ul class="contact-info ">
+                        <li><i class="fas fa-map-marker-alt "></i> اليمن، صنعاء</li>
+                        <li><i class="fas fa-phone "></i> +967 778 942 048</li>
+                        <li><i class="fas fa-envelope "></i> info@thara.com</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section ">
+                    <h3 class="footer-title ">النشرة البريدية</h3>
+                    <p>اشترك في نشرتنا البريدية للحصول على آخر التحديثات.</p>
+                    <form class="newsletter-form ">
+                        <input type="email " class="newsletter-input " placeholder="بريدك الإلكتروني ">
+                        <button type="submit " class="newsletter-btn "><i class="fas fa-paper-plane "></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="copyright ">
+                <p>&copy; 2025 ثَرَى. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نافذة Ajax Modal -->
+    <div id="ajaxModal " class="modal ">
+        <div class="modal-content ">
+            <span class="close-button ">&times;</span>
+            <div id="modalBody "></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // عناصر الشريط المتحرك
+            const sliderTrack = document.getElementById('sliderTrack');
+            const slides = document.querySelectorAll('.slider-slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.getElementById('sliderPrev');
+            const nextBtn = document.getElementById('sliderNext');
+
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            // تهيئة الشريط المتحرك
+            function initSlider() {
+                updateSlider();
+                startAutoSlide();
+            }
+
+            // تحديث موضع الشريط المتحرك
+            function updateSlider() {
+                sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+                // تحديث النقاط النشطة
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+
+                // تحديث الشرائح النشطة
+                slides.forEach((slide, index) => {
+                    slide.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            // الانتقال إلى شريحة محددة
+            function goToSlide(slideIndex) {
+                currentSlide = slideIndex;
+                if (currentSlide >= totalSlides) currentSlide = 0;
+                if (currentSlide < 0) currentSlide = totalSlides - 1;
+                updateSlider();
+                resetAutoSlide();
+            }
+
+            // الشريحة التالية
+            function nextSlide() {
+                goToSlide(currentSlide + 1);
+            }
+
+            // الشريحة السابقة
+            function prevSlide() {
+                goToSlide(currentSlide - 1);
+            }
+
+            // التحكم التلقائي
+            let autoSlideInterval;
+
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 5000); // تغيير كل 5 ثواني
+            }
+
+            function resetAutoSlide() {
+                clearInterval(autoSlideInterval);
+                startAutoSlide();
+            }
+
+            // إضافة event listeners
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+            // النقر على النقاط
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => goToSlide(index));
+            });
+
+            // Swipe للجوال
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            if (sliderTrack) {
+                sliderTrack.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                });
+
+                sliderTrack.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                });
+            }
+
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        nextSlide(); // swipe left
+                    } else {
+                        prevSlide(); // swipe right
+                    }
+                }
+            }
+
+            // تهيئة الشريط المتحرك
+            initSlider();
+
+            // إيقاف التحكم التلقائي عند التمرير
+            sliderTrack.addEventListener('mouseenter', () => {
+                clearInterval(autoSlideInterval);
+            });
+
+            sliderTrack.addEventListener('mouseleave', () => {
+                startAutoSlide();
+            });
+        });
+    </script>
+
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.js "></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js "></script>
+    <!-- WowSlider JS -->
+    <script src="assets/wowslider/engine1/wowslider.js "></script>
+    <script src="assets/wowslider/engine1/script.js "></script>
+    <!-- Pro Extra JS (Toast, Ajax, etc.) -->
+    <script src="assets/js/pro-extra.js "></script>
+    <!-- Modal Ajax JS -->
+    <script src="assets/js/modal-ajax.js "></script>
+    <!-- Enhanced Mobile Menu JS -->
+    <script src="assets/js/enhanced-mobile-menu.js "></script>
+    <!-- Hamburger Menu JS -->
+    <script src="assets/js/hamburger-menu.js "></script>
+    <!-- Ultra Responsive JS - Main enhanced script -->
+    <script src="assets/js/ultra-responsive.js "></script>
+    <!-- Custom JS -->
+    <script src="assets/js/responsive.js "></script>
+    <!-- Enhanced Responsive JS -->
+    <script src="assets/js/enhanced-responsive.js "></script>
+    <script src="assets/js/fontawesome-free-7.0.1-web/js/all.js "></script>
+    <script src="assets/js/fontawesome-free-7.0.1-web/js/all.min.js "></script>
+    <script src="assets/data/content.json "></script>
+    <script rel="preload " src="assets/js/ultra-responsive.js " as="script "></script>
+
+</body>
+
+</html>

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ar" dir="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ثَرَى - لوحة المشرف">
+    <meta name=" author " content="Thara ">
+    <link rel="icon " type="image/jpeg " href="assets/img/dar-alhajar.jpeg " border-radius="50% ">
+    <title>ثَرَى - لوحة المشرف</title>
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/fontawesome-free-7.0.1-web/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/css/fontawesome-free-7.0.1-web/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/css/ultra-responsive.css" rel="stylesheet">
+    <link href="assets/css/mobile-navbar-fix.css" rel="stylesheet">
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <link href="assets/css/fixes.css" rel="stylesheet">
+    <link href="assets/css/custom_extra.css" rel="stylesheet">
+    <link href="assets/css/responsive-enhancements.css" rel="stylesheet">
+    <link href="assets/css/enhanced-responsive.css" rel="stylesheet">
+
+
+    <!-- Preload critical resources -->
+    <!-- <link rel="preload" href="assets/css/ultra-responsive.css" as="style"> -->
+
+
+    <!-- Enhanced mobile support -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+
+</head>
+
+<body>
+    <!-- overlay للشريط الجانبي على الهاتف -->
+    <div class="sidebar-overlay " id="sidebarOverlay "></div>
+
+    <!-- الشريط العلوي -->
+    <header>
+        <div class="container ">
+            <div class="header-content ">
+                <!-- <button class="mobile-menu-toggle " id="menuToggle ">
+                <i class="fas fa-bars "></i>
+                </button> -->
+                <nav id="nav">
+                    <div class="logo">
+                        <h1>ثَرَى</h1>
+                    </div>
+                    <ul id="nav-menu">
+                        <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                        <li><a href="details.html"><i class="fas fa-compass"></i> تصفح التراث</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> من نحن</a></li>
+                    </ul>
+                </nav>
+
+
+                <div class="auth-buttons">
+
+                    <a href="" class="btn btn-outline">
+                        <div class="admin-info ">
+                            <!-- <div class="admin-avatar ">م</div> -->
+                            <div class="admin-details ">
+                                <h3>أحمد الزبيري</h3>
+                                <span>مشرف عام</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="btn btn-primary">
+                        <div class="logo-text ">
+                            <span>لوحة المشرف</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <!-- <div class="logo "> -->
+            <!-- <div class="logo-icon ">
+                    <i class="fas fa-shield-alt "></i>
+                </div> -->
+
+        </div>
+
+        <div class="admin-menu ">
+            <button class="logout-btn " onclick="logout() ">
+                        <i class="fas fa-sign-out-alt " onclick=""></i>
+                </button>
+        </div>
+        </div>
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content ">
+        <div class="container ">
+            <div class="dashboard-layout ">
+                <!-- الشريط الجانبي -->
+                <aside class="sidebar " id="sidebar ">
+                    <button class="close-sidebar " id="closeSidebar ">
+                    <i class="fas fa-times "></i>
+                    </button>
+                    <ul class="sidebar-menu ">
+                        <li class="sidebar-item ">
+                            <a href="#overview " class="sidebar-link active " data-section="overview ">
+                                <i class="fas fa-tachometer-alt "></i>
+                                <span>نظرة عامة</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item ">
+                            <a href="#content-management " class="sidebar-link " data-section="content-management ">
+                                <i class="fas fa-file-alt "></i>
+                                <span>إدارة المحتوى</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item ">
+                            <a href="#user-management " class="sidebar-link " data-section="user-management ">
+                                <i class="fas fa-users "></i>
+                                <span>إدارة المستخدمين</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item ">
+                            <a href="#reports " class="sidebar-link " data-section="reports ">
+                                <i class="fas fa-chart-bar "></i>
+                                <span>التقارير</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="sidebar-section ">
+                        <div class="sidebar-section-title ">الإعدادات</div>
+                        <ul class="sidebar-menu ">
+                            <li class="sidebar-item ">
+                                <a href="#categories " class="sidebar-link " data-section="categories ">
+                                    <i class="fas fa-tags "></i>
+                                    <span>الفئات</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item ">
+                                <a href="#settings " class="sidebar-link " data-section="settings ">
+                                    <i class="fas fa-cog "></i>
+                                    <span>إعدادات النظام</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item ">
+                                <a href="#backup " class="sidebar-link " data-section="backup ">
+                                    <i class="fas fa-database "></i>
+                                    <span>النسخ الاحتياطي</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- المحتوى الرئيسي -->
+                <div class="dashboard-content ">
+                    <!-- نظرة عامة -->
+                    <section class="content-section active " id="overview ">
+                        <div class="section-header ">
+                            <h2 class="section-title ">
+                                <i class="fas fa-tachometer-alt "></i> نظرة عامة
+                            </h2>
+                        </div>
+
+                        <div class="alert alert-info ">
+                            <i class="fas fa-info-circle "></i>
+                            <span>مرحباً بك في لوحة تحكم المشرف. يمكنك من هنا إدارة جميع جوانب منصة ثَرَى.</span>
+                        </div>
+
+                        <div class="admin-stats ">
+                            <div class="stat-card ">
+                                <div class="stat-icon ">
+                                    <i class="fas fa-file-alt "></i>
+                                </div>
+                                <div class="stat-number ">1,247</div>
+                                <div class="stat-label ">إجمالي المحتوى</div>
+                            </div>
+                            <div class="stat-card secondary ">
+                                <div class="stat-icon ">
+                                    <i class="fas fa-users "></i>
+                                </div>
+                                <div class="stat-number ">856</div>
+                                <div class="stat-label ">المستخدمين النشطين</div>
+                            </div>
+                            <div class="stat-card accent ">
+                                <div class="stat-icon ">
+                                    <i class="fas fa-clock "></i>
+                                </div>
+                                <div class="stat-number ">23</div>
+                                <div class="stat-label ">في انتظار المراجعة</div>
+                            </div>
+                            <div class="stat-card warning ">
+                                <div class="stat-icon ">
+                                    <i class="fas fa-exclamation-triangle "></i>
+                                </div>
+                                <div class="stat-number ">5</div>
+                                <div class="stat-label ">تقارير المستخدمين</div>
+                            </div>
+                            <div class="stat-card info ">
+                                <div class="stat-icon ">
+                                    <i class="fas fa-eye "></i>
+                                </div>
+                                <div class="stat-number ">45,892</div>
+                                <div class="stat-label ">المشاهدات اليوم</div>
+                            </div>
+                            <div class="stat-card dark ">
+                                <div class="stat-icon ">
+                                    <i class="fas fa-heart "></i>
+                                </div>
+                                <div class="stat-number ">3,456</div>
+                                <div class="stat-label ">الإعجابات الشهر</div>
+                            </div>
+                        </div>
+
+                        <div class="chart-container ">
+                            <h3 class="chart-title ">إحصائيات المشاهدات الأسبوعية</h3>
+                            <div class="chart-placeholder ">
+                                <i class="fas fa-chart-line "></i>
+                                <span>سيتم عرض الرسم البياني هنا</span>
+                            </div>
+                        </div>
+
+                        <h3>آخر الأنشطة</h3>
+                        <table class="data-table ">
+                            <thead>
+                                <tr>
+                                    <th>النشاط</th>
+                                    <th>المستخدم</th>
+                                    <th>التاريخ</th>
+                                    <th>الحالة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>إضافة محتوى جديد: "قلعة القاهرة في تعز "</td>
+                                    <td>سالم الشامي</td>
+                                    <td>منذ ساعتين</td>
+                                    <td><span class="status-badge status-pending ">قيد المراجعة</span></td>
+                                </tr>
+                                <tr>
+                                    <td>تسجيل مستخدم جديد</td>
+                                    <td>فاطمة أحمد</td>
+                                    <td>منذ 3 ساعات</td>
+                                    <td><span class="status-badge status-active ">نشط</span></td>
+                                </tr>
+                                <tr>
+                                    <td>تقرير محتوى: "محتوى غير مناسب "</td>
+                                    <td>محمد علي</td>
+                                    <td>منذ 5 ساعات</td>
+                                    <td><span class="status-badge status-pending ">قيد المراجعة</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- إدارة المحتوى -->
+                    <section class="content-section " id="content-management ">
+                        <div class="section-header ">
+                            <h2 class="section-title ">
+                                <i class="fas fa-file-alt "></i> إدارة المحتوى
+                            </h2>
+                        </div>
+
+                        <div class="alert alert-warning ">
+                            <i class="fas fa-exclamation-triangle "></i>
+                            <span>يوجد 23 عنصر في انتظار المراجعة والموافقة.</span>
+                        </div>
+
+                        <div class="filters ">
+                            <div class="filter-group ">
+                                <label class="filter-label ">البحث</label>
+                                <input type="text " class="filter-input " placeholder="ابحث في المحتوى... ">
+                            </div>
+                            <div class="filter-group ">
+                                <label class="filter-label ">الحالة</label>
+                                <select class="filter-select ">
+                                    <option value=" ">جميع الحالات</option>
+                                    <option value="published ">منشور</option>
+                                    <option value="pending ">قيد المراجعة</option>
+                                    <option value="rejected ">مرفوض</option>
+                                </select>
+                            </div>
+                            <div class="filter-group ">
+                                <label class="filter-label ">الفئة</label>
+                                <select class="filter-select ">
+                                    <option value=" ">جميع الفئات</option>
+                                    <option value="architecture ">العمارة التراثية</option>
+                                    <option value="crafts ">الحرف اليدوية</option>
+                                    <option value="food ">الأطعمة الشعبية</option>
+                                    <option value="clothing ">الأزياء التراثية</option>
+                                </select>
+                            </div>
+                            <div class="filter-group ">
+                                <label class="filter-label ">المؤلف</label>
+                                <input type="text " class="filter-input " placeholder="اسم المؤلف... ">
+                            </div>
+                        </div>
+
+                        <table class="data-table ">
+                            <thead>
+                                <tr>
+                                    <th>العنوان</th>
+                                    <th>المؤلف</th>
+                                    <th>الفئة</th>
+                                    <th>المشاهدات</th>
+                                    <th>الحالة</th>
+                                    <th>تاريخ الإرسال</th>
+                                    <th>الإجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>قلعة القاهرة في تعز</td>
+                                    <td>سالم الشامي</td>
+                                    <td>العمارة التراثية</td>
+                                    <td>0</td>
+                                    <td><span class="status-badge status-pending ">قيد المراجعة</span></td>
+                                    <td>25 يناير 2025</td>
+                                    <td>
+                                        <button class="action-btn " title="عرض ">
+                                            <i class="fas fa-eye "></i>
+                                        </button>
+                                        <button class="action-btn success " title="موافقة ">
+                                            <i class="fas fa-check "></i>
+                                        </button>
+                                        <button class="action-btn danger " title="رفض ">
+                                            <i class="fas fa-times "></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>صناعة الفخار في لالج</td>
+                                    <td>فاطمة أحمد</td>
+                                    <td>الحرف اليدوية</td>
+                                    <td>120</td>
+                                    <td><span class="status-badge status-published ">منشور</span></td>
+                                    <td>20 يناير 2025</td>
+                                    <td>
+                                        <button class="action-btn " title="عرض ">
+                                            <i class="fas fa-eye "></i>
+                                        </button>
+                                        <button class="action-btn " title="تعديل ">
+                                            <i class="fas fa-edit "></i>
+                                        </button>
+                                        <button class="action-btn danger " title="حذف ">
+                                            <i class="fas fa-trash-alt "></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>الزي الصنعاني التقليدي</td>
+                                    <td>علي محمد</td>
+                                    <td>الأزياء التراثية</td>
+                                    <td>500</td>
+                                    <td><span class="status-badge status-published ">منشور</span></td>
+                                    <td>18 يناير 2025</td>
+                                    <td>
+                                        <button class="action-btn " title="عرض ">
+                                            <i class="fas fa-eye "></i>
+                                        </button>
+                                        <button class="action-btn " title="تعديل ">
+                                            <i class="fas fa-edit "></i>
+                                        </button>
+                                        <button class="action-btn danger " title="حذف ">
+                                            <i class="fas fa-trash-alt "></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>مخطوطات الجامع الكبير</td>
+                                    <td>يحيى الحوثي</td>
+                                    <td>وثائق تاريخية</td>
+                                    <td>0</td>
+                                    <td><span class="status-badge status-pending ">قيد المراجعة</span></td>
+                                    <td>15 يناير 2025</td>
+                                    <td>
+                                        <button class="action-btn " title="عرض ">
+                                            <i class="fas fa-eye "></i>
+                                        </button>
+                                        <button class="action-btn success " title="موافقة ">
+                                            <i class="fas fa-check "></i>
+                                        </button>
+                                        <button class="action-btn danger " title="رفض ">
+                                            <i class="fas fa-times "></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- إدارة المستخدمين -->
+                    <section class="content-section " id="user-management ">
+                        <div class="section-header ">
+                            <h2 class="section-title ">
+                                <i class="fas fa-users "></i> إدارة المستخدمين
+                            </h2>
+                            <button class="btn btn-primary ">
+                                <i class="fas fa-user-plus "></i> إضافة مستخدم جديد
+                            </button>
+                        </div>
+
+                        <div class="filters ">
+                            <div class="filter-group ">
+                                <label class="filter-label ">البحث</label>
+                                <input type="text " class="filter-input " placeholder="ابحث عن مستخدم... ">
+                            </div>
+                            <div class="filter-group ">
+                                <label class="filter-label ">الدور</label>
+                                <select class="filter-select ">
+                                    <option value=" ">جميع الأدوار</option>
+                                    <option value="admin ">مشرف</option>
+                                    <option value="editor ">محرر</option>
+                                    <option value="user ">مستخدم</option>
+                                </select>
+                            </div>
+                            <div class="filter-group ">
+                                <label class="filter-label ">الحالة</label>
+                                <select class="filter-select ">
+                                    <option value=" ">جميع الحالات</option>
+                                    <option value="active ">نشط</option>
+                                    <option value="inactive ">غير نشط</option>
+                                    <option value="suspended ">معلق</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <table class="data-table ">
+                            <thead>
+                                <tr>
+                                    <th>الاسم</th>
+                                    <th>البريد الإلكتروني</th>
+                                    <th>الدور</th>
+                                    <th>الحالة</th>
+                                    <th>تاريخ التسجيل</th>
+                                    <th>الإجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>أحمد الزبيري</td>
+                                    <td>ahmed.alzubeiri@example.com</td>
+                                    <td>مشرف</td>
+                                    <td><span class="status-badge status-active ">نشط</span></td>
+                                    <td>01 يناير 2024</td>
+                                    <td>
+                                        <button class="action-btn " title="عرض ">
+                                            <i class="fas fa-eye "></i>
+                                        </button>
+                                        <button class="action-btn " title="تعديل ">
+                                            <i class="fas fa-edit "></i>
+                                        </button>
+                                        <button class="action-btn danger " title="حذف ">
+                                            <i class="fas fa-trash-alt "></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>فاطمة أحمد</td>
+                                    <td>fatima.ahmed@example.com</td>
+                                    <td>مستخدم</td>
+                                    <td><span class="status-badge status-active ">نشط</span></td>
+                                    <td>10 يناير 2024</td>
+                                    <td>
+                                        <button class="action-btn " title="عرض ">
+                                            <i class="fas fa-eye "></i>
+                                        </button>
+                                        <button class="action-btn " title="تعديل ">
+                                            <i class="fas fa-edit "></i>
+                                        </button>
+                                        <button class="action-btn danger " title="حذف ">
+                                            <i class="fas fa-trash-alt "></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>سالم الشامي</td>
+                                    <td>salem.alshami@example.com</td>
+                                    <td>محرر</td>
+                                    <td><span class="status-badge status-inactive ">غير نشط</span></td>
+                                    <td>15 فبراير 2024</td>
+                                    <td>
+                                        <button class="action-btn " title="عرض ">
+                                            <i class="fas fa-eye "></i>
+                                        </button>
+                                        <button class="action-btn " title="تعديل ">
+                                            <i class="fas fa-edit "></i>
+                                        </button>
+                                        <button class="action-btn danger " title="حذف ">
+                                            <i class="fas fa-trash-alt "></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- التقارير -->
+                    <section class="content-section " id="reports ">
+                        <div class="section-header ">
+                            <h2 class="section-title ">
+                                <i class="fas fa-chart-bar "></i> التقارير
+                            </h2>
+                        </div>
+
+                        <div class="report-card ">
+                            <h3>تقرير المحتوى الشهري</h3>
+                            <p>ملخص لأداء المحتوى خلال الشهر الماضي.</p>
+                            <button class="btn btn-primary ">
+                                <i class="fas fa-download "></i> تحميل التقرير (PDF)
+                            </button>
+                        </div>
+
+                        <div class="report-card ">
+                            <h3>تقرير المستخدمين النشطين</h3>
+                            <p>قائمة بالمستخدمين الأكثر نشاطاً وتفاعلاً.</p>
+                            <button class="btn btn-primary ">
+                                <i class="fas fa-download "></i> تحميل التقرير (CSV)
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- الفئات -->
+                    <section class="content-section " id="categories ">
+                        <div class="section-header ">
+                            <h2 class="section-title ">
+                                <i class="fas fa-tags "></i> الفئات
+                            </h2>
+                            <button class="btn btn-primary ">
+                                <i class="fas fa-plus "></i> إضافة فئة جديدة
+                            </button>
+                        </div>
+
+                        <table class="data-table ">
+                            <thead>
+                                <tr>
+                                    <th>اسم الفئة</th>
+                                    <th>عدد العناصر</th>
+                                    <th>الإجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>العمارة التراثية</td>
+                                    <td>345</td>
+                                    <td>
+                                        <button class="action-btn " title="تعديل ">
+                                            <i class="fas fa-edit "></i>
+                                        </button>
+                                        <button class="action-btn danger " title="حذف ">
+                                            <i class="fas fa-trash-alt "></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>الحرف اليدوية</td>
+                                    <td>210</td>
+                                    <td>
+                                        <button class="action-btn " title="تعديل ">
+                                            <i class="fas fa-edit "></i>
+                                        </button>
+                                        <button class="action-btn danger " title="حذف ">
+                                            <i class="fas fa-trash-alt "></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>الأطعمة الشعبية</td>
+                                    <td>150</td>
+                                    <td>
+                                        <button class="action-btn " title="تعديل ">
+                                            <i class="fas fa-edit "></i>
+                                        </button>
+                                        <button class="action-btn danger " title="حذف ">
+                                            <i class="fas fa-trash-alt "></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- إعدادات النظام -->
+                    <section class="content-section " id="settings ">
+                        <div class="section-header ">
+                            <h2 class="section-title ">
+                                <i class="fas fa-cog "></i> إعدادات النظام
+                            </h2>
+                        </div>
+
+                        <form class="settings-form ">
+                            <div class="form-group ">
+                                <label for="siteName " class="form-label ">اسم الموقع</label>
+                                <input type="text " id="siteName " class="form-control " value="ثَرَى - منصة التراث اليمني ">
+                            </div>
+                            <div class="form-group ">
+                                <label for="adminEmail " class="form-label ">بريد المشرف</label>
+                                <input type="email " id="adminEmail " class="form-control " value="admin@thara.com ">
+                            </div>
+                            <div class="form-group ">
+                                <label for="itemsPerPage " class="form-label ">عناصر لكل صفحة</label>
+                                <input type="number " id="itemsPerPage " class="form-control " value="10 ">
+                            </div>
+                            <button type="submit " class="btn btn-primary ">حفظ الإعدادات</button>
+                        </form>
+                    </section>
+
+                    <!-- النسخ الاحتياطي -->
+                    <section class="content-section " id="backup ">
+                        <div class="section-header ">
+                            <h2 class="section-title ">
+                                <i class="fas fa-database "></i> النسخ الاحتياطي
+                            </h2>
+                        </div>
+
+                        <div class="backup-card ">
+                            <h3>إنشاء نسخة احتياطية الآن</h3>
+                            <p>قم بإنشاء نسخة احتياطية كاملة لقاعدة البيانات والملفات.</p>
+                            <button class="btn btn-primary ">
+                                <i class="fas fa-hdd "></i> إنشاء نسخة احتياطية
+                            </button>
+                        </div>
+
+                        <div class="backup-card ">
+                            <h3>استعادة من نسخة احتياطية</h3>
+                            <p>استعادة النظام إلى حالة سابقة من نسخة احتياطية موجودة.</p>
+                            <button class="btn btn-secondary ">
+                                <i class="fas fa-undo "></i> استعادة
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="container ">
+            <div class="footer-content ">
+                <div class="footer-section ">
+                    <h3 class="footer-logo ">ثَرَى</h3>
+                    <p class="footer-description ">منصة تشاركية للحفاظ على التراث اليمني الغني والمتنوع.</p>
+                    <div class="social-links ">
+                        <a href="# " class="social-link "><i class="fab fa-facebook-f "></i></a>
+                        <a href="# " class="social-link "><i class="fab fa-twitter "></i></a>
+                        <a href="# " class="social-link "><i class="fab fa-instagram "></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section ">
+                    <h3 class="footer-title ">روابط سريعة</h3>
+                    <ul class="footer-links ">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="details.html">تصفح التراث</a></li>
+                        <li><a href="adminDashboard.html">إضافة عنصر</a></li>
+                        <li><a href="about.html">عن المنصة</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section ">
+                    <h3 class="footer-title ">تواصل معنا</h3>
+                    <ul class="contact-info ">
+                        <li><i class="fas fa-map-marker-alt "></i> اليمن، صنعاء</li>
+                        <li><i class="fas fa-phone "></i> +967 778 942 048</li>
+                        <li><i class="fas fa-envelope "></i> info@thara.com</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section ">
+                    <h3 class="footer-title ">النشرة البريدية</h3>
+                    <p>اشترك في نشرتنا البريدية للحصول على آخر التحديثات.</p>
+                    <form class="newsletter-form ">
+                        <input type="email " class="newsletter-input " placeholder="بريدك الإلكتروني ">
+                        <button type="submit " class="newsletter-btn "><i class="fas fa-paper-plane "></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="copyright ">
+                <p>&copy; 2025 ثَرَى. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.js "></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js "></script>
+    <!-- WowSlider JS -->
+    <script src="assets/wowslider/engine1/wowslider.js "></script>
+    <script src="assets/wowslider/engine1/script.js "></script>
+    <!-- Pro Extra JS (Toast, Ajax, etc.) -->
+    <script src="assets/js/pro-extra.js "></script>
+    <!-- Modal Ajax JS -->
+    <script src="assets/js/modal-ajax.js "></script>
+    <!-- Enhanced Mobile Menu JS -->
+    <script src="assets/js/enhanced-mobile-menu.js "></script>
+    <!-- Hamburger Menu JS -->
+    <script src="assets/js/hamburger-menu.js "></script>
+    <!-- Ultra Responsive JS - Main enhanced script -->
+    <script src="assets/js/ultra-responsive.js "></script>
+    <!-- Custom JS -->
+    <script src="assets/js/responsive.js "></script>
+    <!-- Enhanced Responsive JS -->
+    <script src="assets/js/enhanced-responsive.js "></script>
+    <script src="assets/js/fontawesome-free-7.0.1-web/js/all.js "></script>
+    <script src="assets/js/fontawesome-free-7.0.1-web/js/all.min.js "></script>
+    <script src="assets/data/content.json "></script>
+    <script rel="preload " src="assets/js/ultra-responsive.js " as="script "></script>
+</body>
+
+</html>

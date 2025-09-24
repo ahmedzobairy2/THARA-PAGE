@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ثَرَى - انضم الينا">
+    <meta name="author" content="Thara ">
+    <link rel="icon" type="image/jpeg" href="assets/img/dar-alhajar.jpeg" border-radius="50%">
+    <title>انضم الينا - ثَرَى</title>
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="assets/css/fontawesome-free-7.0.1-web/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/css/fontawesome-free-7.0.1-web/css/fontawesome.css" rel="stylesheet">
+    <link href="assets/css/ultra-responsive.css" rel="stylesheet">
+    <link href="assets/css/mobile-navbar-fix.css" rel="stylesheet">
+    <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+    <link href="assets/css/fixes.css" rel="stylesheet">
+    <link href="assets/css/custom_extra.css" rel="stylesheet">
+    <link href="assets/css/responsive-enhancements.css" rel="stylesheet">
+    <link href="assets/css/enhanced-responsive.css" rel="stylesheet">
+
+
+    <!-- Preload critical resources -->
+    <!-- <link rel="preload" href="assets/css/ultra-responsive.css" as="style"> -->
+
+
+    <!-- Enhanced mobile support -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="format-detection" content="telephone=no">
+
+</head>
+
+<body>
+    <a href="index.html" class="back-home">
+        <i class="fas fa-arrow-right"></i> العودة للرئيسية
+    </a>
+
+    <div class="register-container">
+        <div class="register-form">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>ثَرَى</h1>
+                    <span>منصة التراث اليمني</span>
+                </div>
+            </div>
+
+            <h2 class="form-title">انضم إلى مجتمعنا</h2>
+            <p class="form-subtitle">أنشئ حساباً جديداً وابدأ رحلتك في اكتشاف ومشاركة التراث اليمني</p>
+
+            <form id="registerForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="firstName">الاسم الأول</label>
+                        <input type="text" id="firstName" class="form-input" placeholder="الاسم الأول" required>
+                        <div class="error-message" id="firstNameError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="lastName">الاسم الأخير</label>
+                        <input type="text" id="lastName" class="form-input" placeholder="الاسم الأخير" required>
+                        <div class="error-message" id="lastNameError"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" class="form-input" placeholder="أدخل بريدك الإلكتروني" required id="registerEmail" id="registerEmail">
+                    <div class="error-message" id="emailError"></div>
+                    <div class="success-message" id="emailSuccess">البريد الإلكتروني متاح</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">رقم الهاتف</label>
+                    <input type="tel" id="phone" class="form-input" placeholder="+967 xxx xxx xxx">
+                    <div class="error-message" id="phoneError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="password">كلمة المرور</label>
+                    <input type="password" id="password" class="form-input" placeholder="أدخل كلمة مرور قوية" required id="registerPassword" id="registerPassword2" id="registerPassword" id="registerPassword2">
+                    <div class="password-strength">
+                        <div class="strength-bar">
+                            <div class="strength-fill" id="strengthFill"></div>
+                        </div>
+                        <div class="strength-text" id="strengthText">قوة كلمة المرور</div>
+                    </div>
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="confirmPassword">تأكيد كلمة المرور</label>
+                    <input type="password" id="confirmPassword" class="form-input" placeholder="أعد إدخال كلمة المرور" required>
+                    <div class="error-message" id="confirmPasswordError"></div>
+                    <div class="success-message" id="confirmPasswordSuccess">كلمات المرور متطابقة</div>
+                </div>
+
+                <div class="terms-checkbox">
+                    <input type="checkbox" id="terms" required>
+                    <div class="terms-text">
+                        أوافق على <a href="#">شروط الاستخدام</a> و <a href="#">سياسة الخصوصية</a> الخاصة بمنصة ثَرَى
+                    </div>
+                </div>
+
+                <button type="submit" class="btn" id="registerBtn">
+                    إنشاء الحساب
+                </button>
+            </form>
+
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>جاري إنشاء الحساب...</p>
+            </div>
+
+            <div class="divider">
+                <span>أو</span>
+            </div>
+
+            <div class="social-login">
+                <button class="social-btn google">
+                    <i class="fab fa-google"></i>
+                    Google
+                </button>
+                <button class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    Facebook
+                </button>
+            </div>
+
+            <div class="login-link">
+                لديك حساب بالفعل؟ <a href="login.html">سجل دخولك</a>
+            </div>
+        </div>
+
+        <div class="register-visual">
+            <div class="visual-content">
+                <h2>ابدأ رحلتك التراثية</h2>
+                <p>انضم إلى آلاف المستخدمين الذين يساهمون في حفظ وتوثيق التراث اليمني العريق</p>
+
+                <ul class="benefits">
+                    <li>
+                        <i class="fas fa-upload"></i>
+                        <span>ارفع وشارك محتواك التراثي</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-heart"></i>
+                        <span>تفاعل مع المحتوى المفضل لديك</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-comments"></i>
+                        <span>شارك في النقاشات التراثية</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-trophy"></i>
+                        <span>احصل على نقاط وشارات التقدير</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-bell"></i>
+                        <span>تلقى إشعارات بالمحتوى الجديد</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-pro-container" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Toast Notification (added) -->
+    <div id="myToast" class="toast align-items-center text-bg-success border-0 position-fixed bottom-0 end-0 m-3" role="alert" aria-live="assertive" aria-atomic="true" style="z-index:9999;">
+        <div class="d-flex">
+            <div class="toast-body" id="myToastBody">
+                ✅ تم تنفيذ العملية بنجاح!
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+
+
+    <!-- Ajax-loaded Modal (added) -->
+    <div class="modal fade" id="ajaxModal" tabindex="-1" aria-labelledby="ajaxModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ajaxModalLabel">تفاصيل (Ajax)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="ajaxModalBody">
+                    <p>جاري تحميل المحتوى...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            // This listens for a click on any element with the ID "openAjaxModal"
+            $(document).on('click', '#openAjaxModal', function(e) {
+                e.preventDefault(); // Prevent default link behavior
+
+                var modal = new bootstrap.Modal(document.getElementById('ajaxModal'));
+                var modalBody = $('#ajaxModalBody');
+
+                // Show loading text and display the modal
+                modalBody.html('<div class="text-center p-4"><i class="fas fa-spinner fa-spin fa-2x"></i><p class="mt-2">جاري تحميل المحتوى...</p></div>');
+                modal.show();
+
+                $.ajax({
+                    url: 'assets/data/content.json',
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        // Use the first item from the "content" array for this example
+                        var item = data.content[0];
+                        if (item) {
+                            var html = '<h5>' + item.title + '</h5><p>' + item.description + '</p>';
+                            modalBody.html(html);
+                        } else {
+                            modalBody.html('<p>لم يتم العثور على محتوى.</p>');
+                        }
+                    },
+                    error: function() {
+                        modalBody.html('<p class="text-danger">فشل تحميل المحتوى. يرجى المحاولة مرة أخرى.</p>');
+                    }
+                });
+            });
+        });
+    </script>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.7.1.js "></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js "></script>
+    <!-- WowSlider JS -->
+    <script src="assets/wowslider/engine1/wowslider.js "></script>
+    <script src="assets/wowslider/engine1/script.js "></script>
+    <!-- Pro Extra JS (Toast, Ajax, etc.) -->
+    <script src="assets/js/pro-extra.js "></script>
+    <!-- Modal Ajax JS -->
+    <script src="assets/js/modal-ajax.js "></script>
+    <!-- Enhanced Mobile Menu JS -->
+    <script src="assets/js/enhanced-mobile-menu.js "></script>
+    <!-- Hamburger Menu JS -->
+    <script src="assets/js/hamburger-menu.js "></script>
+    <!-- Ultra Responsive JS - Main enhanced script -->
+    <script src="assets/js/ultra-responsive.js "></script>
+    <!-- Custom JS -->
+    <script src="assets/js/responsive.js "></script>
+    <!-- Enhanced Responsive JS -->
+    <script src="assets/js/enhanced-responsive.js "></script>
+    <script src="assets/js/fontawesome-free-7.0.1-web/js/all.js "></script>
+    <script src="assets/js/fontawesome-free-7.0.1-web/js/all.min.js "></script>
+    <script src="assets/data/content.json "></script>
+    <script rel="preload " src="assets/js/ultra-responsive.js " as="script "></script>
+
+</body>
+
+</html>

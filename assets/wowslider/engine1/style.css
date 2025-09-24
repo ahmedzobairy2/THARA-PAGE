@@ -1,0 +1,45 @@
+/* WowSlider basic styles */
+
+#wowslider-container1 {
+    position: relative;
+    max-width: 500px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+#wowslider-container1 .ws_images ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#wowslider-container1 .ws_images li {
+    flex: 1;
+    display: none;
+}
+
+#wowslider-container1 img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.ws_bullets {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ws_bullets a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 3px;
+    text-indent: -9999px;
+}
+
+.ws_bullets a:hover,
+.ws_bullets a.active {
+    background: #333;
+}
